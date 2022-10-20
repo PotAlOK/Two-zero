@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>My First JavaScript Programm</title>
+        <script>
+            function allsum(...args) {
+            console.log(alsum(1 , 2, 3, '55', '77ы', 0)); //138
+            console.log(alsum('q' ,'w', 'e', 0)); //0
+            console.log(alsum('q' ,'w', 'e')); //null
+            args_mapped = args.map(item => parseInt(item));
+            args_filtered = args_mapped.filter(item => !isNaN(item));
+            console.log(args_mapped);
+            console.log(args_filtred);
+            
+            let resault = null;
+            
+            if (args_filtred.length) { 
+                    resault = args_filtred.reduce((sum, item) => item +sum, 0);
+            }
+            }
+            
+            
+            </script>
+        
+    </head>
+    <body>
+    </body>
+ </html>
