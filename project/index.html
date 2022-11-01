@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Главная страница</title>
+        
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <section class="container">
+                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span>Москва</span></div>
+            </section>
+            <section class="container"><!--Здесь должны быть лого, форма поиска, входы в личный кабинет и корзину-->
+            <div class="wrapper2"><span class="logo"></span><div class="basket"></div>
+            <span class="search"><input type="search" id="site-search" placeholder="Поиск по сайту"><button type=button id="poisk"></button></span></div></section>
+            <section class="container">
+                <nav class="topmenu">
+                    <a href="index.html"><span>Главная страница</span></a>
+                    <a href="catalog.html"><span>Каталог</span></a>
+                    <a href="#"><span>Товар</span></a>
+                    <a href="#"><span>Корзина</span></a>
+                    <a href="#"><span>Контакты</span></a>
+                </nav>
+            </section>
+        </header>
+        
+        <main>
+            <!-- action block -->
+            <section class="action">
+                <div class="container">
+                    <p>НАША СУПЕР АКЦИЯ!!!</p>
+                    <p>
+                        До окончания осталось:
+                        <span class="actiontimer" data-actionend="2022-11-09T17:00:00">&nbsp;</span>
+                    </p>
+                </div>
+            </section>
+            <!-- /action block -->
+            <!-- slider block -->
+            <section class="slider" id="slider1">
+                <div class="slider_desk">
+                    <div class="slider_block">
+                        <img src="images/13.jpg" alt="pic 1">
+                    </div>
+                    
+                    <div class="slider_block">
+                        <img src="images/16.jpg" alt="pic 2">
+                    </div>
+                    
+                    <div class="slider_block">
+                        <img src="images/15.jpg" alt="pic 3">
+                    </div>
+                    <div class="slider_block">
+                        <img src="images/14.jpg" alt="pic 3">
+                    </div>
+                    <div class="slider_block">
+                        <img src="images/17.jpg" alt="pic 3">
+                    </div>
+                </div>
+                
+                <button type="button" class="to_left icon"></button>
+                
+                <button type="button" class="to_right icon"></button>
+                
+                <div class="slider_points"></div>
+            </section>
+            <!-- /slider block -->
+            <!-- slider block -->
+            <!--<section class="slider" id="slider2">
+                <div class="slider_desk">
+                    <div class="slider_block" style="background:red">
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                    </div>
+                    
+                    <div class="slider_block" style="background:green">
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                    </div>
+                    
+                    <div class="slider_block" style="background:blue">
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                        <p>Some text without pictures.</p>
+                    </div>
+                </div>
+                
+                <button type="button" class="to_left icon"></button>
+                
+                <button type="button" class="to_right icon"></button>
+                
+                <div class="slider_points"></div>
+            </section>-->
+            <!-- /slider block -->
+            <!--<section class="container">Какой-нибудь контент</section>-->
+            
+                <div class="wrapper">
+                <div class="new"><p>Новые товары</p></div>
+                <div class="hit_products">Хиты продаж</div>
+                
+                <div class="new_products">
+                
+                <div class="new1">
+                    <div class="img1"></div>
+                    <a href="URL">Фильтр сетка воздухозаборника Лада Веста седан, СВ, Кросс</a>
+                    <div class="price">380 &#8381</div>
+                    <div class="buy"></div>
+                    </div>
+                <div class="new2">
+                    <div class="img2"></div>
+                    <a href="URL">Тормозные колодки задние Лада Веста, Х Рей с дисковыми тормозами TRW</a>
+                    <div class="price">3610 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                <div class="new3">
+                    <div class="img3"></div>
+                    <a href="URL">Колодки тормозные передние Лада Веста, Х Рей Кросс, LADA</a>
+                    <div class="price">3765 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                <div class="new4">
+                    <div class="img4"></div>
+                    <a href="URL">Диск оригинальный литой R17 Лада Веста СВ Кросс</a>
+                    <div class="price">14060 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                
+                <div class="new5">
+                    <div class="img5"></div>
+                    <a href="URL">Светодиодные тюнинг фонари Лада Веста</a>
+                    <div class="price">19750 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                <div class="new6">
+                    <div class="img6"></div>
+                    <a href="URL">Моделька Лада Веста СВ Кросс</a>
+                    <div class="price">1999 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                <div class="new7">
+                    <div class="img7"></div>
+                    <a href="URL">Комплект сцепления Sachs Лада Веста1,6 АМТ (робот)</a>
+                    <div class="price">11678 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                
+                <div class="new8">
+                    <div class="img8"></div>
+                    <a href="URL">Диск Тормозной 2180 (Веста) АВТОВАЗ</a>
+                    <div class="price">2880 &#8381</div>
+                    <div class="buy"></div>
+                </div>
+                
+                <div class="new9">
+                    <div class="img9"></div>
+                    <a href="URL">Жидкость тормозная Super DOT 4, LADA ( Автоваз) 455 </a>
+                    <div class="price">232 &#8381</div>
+                    <div class="buy"></div>
+                    </div>
+                
+                
+                <div class="hit">
+                    <div class="new10">
+                    <div class="img10"></div>
+                    <a href="URL">Антискрип Маделин - Н (лента) 15х2000 мм., STP </a>
+                    <div class="price">69 &#8381</div>
+                    <div class="buy"></div>
+                    </div>
+                    <div class="new11">
+                    <div class="img11"></div>
+                    <a href="URL">Лампы в дхо Лада Веста, Гранта </a>
+                    <div class="price">191 &#8381</div>
+                    <div class="buy"></div>
+                    </div>
+                    <div class="new12">
+                    <div class="img12"></div>
+                    <a href="URL">Пищалка в Лада Веста 281489095R </a>
+                    <div class="price">2168 &#8381</div>
+                    <div class="buy"></div>
+                    </div>
+                </div></div>
+                
+            
+            </div>
+            
+        </main>
+        
+        <footer>
+            <section class="container">Меню столбиками</section>
+            <section class="container">Строка копирайта</section>
+        </footer>
+    </body>
+</html>

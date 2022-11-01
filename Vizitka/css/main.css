@@ -11,15 +11,21 @@ html {
 body {
     height: 100%;
     background-image: url('../images/5594016.jpg');
+    margin: 0;
 }
 
 
 .shapka {
     grid-area: a;
-    /*background: #848482;*/
+    background: #848482;
     width: 100%;
     height: 100px;
+    z-index:-1;
+    opacity: 0.5;
+    
+    
 }
+
 .telo {
     grid-area: c;
     /*background: green;*/
@@ -30,11 +36,15 @@ body {
     font-weight: 300px;
     font-style: normal;
     font-size: 30px;
+    padding-right: 150px;
+    box-sizing: border-box;
+    
 }
 
 .telo p {
     font-family: 'Fira Sans';
     font-style: normal;
+    text-align: center;
     } 
 .linc {
     font-family: 'Fira Sans';
@@ -48,13 +58,15 @@ body {
     border-radius: 50%;
     background: red;
     width: 70px;
-    margin-top: 15px;
+    margin-top: -740px;
     margin-left: 80px;
     float: left;
     background-image: url('../images/i.jpg');
     background-size: cover;
     background-position: -10px;
     cursor: pointer;
+    opacity: 1;
+    z-index: 1;
 }
 
 .img {
@@ -91,6 +103,8 @@ body {
     font-weight: 300;
     font-style: normal;
     font: 17px;
+    opacity: 0.5;
+    box-sizing: border-box;
 }
 .test {
     display: grid;
