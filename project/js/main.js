@@ -27,7 +27,7 @@ function actiontimer() {
     delta = Math.floor(delta/60);
     let hours = delta % 24;
     let days = Math.floor(delta/24);
-    let helpstr = `${days} ${multiple(days, 'день', 'дня', 'дней')} ${addZero(hours)} ${multiple(hours, 'час', 'часа', 'часов')} ${addZero(minutes)} ${multiple(minutes, 'минута', 'минуты', 'минут')} ${addZero(seconds)} ${multiple(seconds, 'секунда', 'секунды', 'секунд')}`;
+    let helpstr = `<span>${days}</span> ${multiple(days, 'день', 'дня', 'дней')} <span>${addZero(hours)}</span> ${multiple(hours, 'час', 'часа', 'часов')} <span>${addZero(minutes)}</span> ${multiple(minutes, 'минута', 'минуты', 'минут')} <span>${addZero(seconds)}</span> ${multiple(seconds, 'секунда', 'секунды', 'секунд')}`;
     $('.actiontimer').html(helpstr);
     return res;
 }
@@ -50,6 +50,12 @@ function multiple(num, word1, word2, word3) {
 
 /* on ready */
 $(function(){
+    $('.topmenu a').each(function(){
+        if (this.href == location.href.split('#')[0]) this.className = 'current';
+    });
+    
+    $('#city span').html(localStorage.getItem('city') || 'Москва');
+    
     $('#city').click(function(){
         getModalWindow('citymodal');
         $('.modal').append('<h1>Выберите город:</h1><input type="text" id="citysearch" placeholder="Введите часть названия города..."><div class="columns"></div>');
@@ -57,7 +63,9 @@ $(function(){
             $('.modal .columns').append('<p>' + city + '</p>');
         }
         $('.modal p').click(function(){
-            $('#city span').html($(this).html());
+            let city = $(this).html()
+            $('#city span').html(city);
+            localStorage.setItem('city', city);
             dropModalWindow();
         });
         $('#citysearch').on('input', function(){
@@ -165,9 +173,9 @@ $(function(){
             let v1 = +$('#amount1').val();
             let v2 = +$('#amount2').val();
             if (v2 > rangemax) {
-                v1 = rangemax;
+                v2 = rangemax;
             } else if (v2 < rangemin) {
-                v1 = rangemin;
+                v2 = rangemin;
             }
             $('#amount2').val(v2);
             if (v1 > v2) {
@@ -179,6 +187,26 @@ $(function(){
         $('#amount1').val(rangemin);
         $('#amount2').val(rangemax);
     }
+    
+    if ($('.images .gallery').length) {
+        $('.bigimage img').click(function(){
+            lightbox(this);
+        });
+        
+        $('.gal_left').click(function(){
+            if (!$(this).hasClass('disabled')) galSlide('right');
+        });
+        
+        $('.gal_right').click(function(){
+            if (!$(this).hasClass('disabled')) galSlide('left');
+        });
+        
+        $('.rail img').click(function(){
+            let attr = $(this).attr('src').split('mini_').join('');
+            $('.bigimage img').attr('src', attr);
+        });
+    }
+    
     
     console.log('just loaded');
 });

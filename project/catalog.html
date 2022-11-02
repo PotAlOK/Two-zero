@@ -5,11 +5,13 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Главная страница</title>
+        <title>Каталог</title>
         
+        <link rel="stylesheet" href="css/jquery-ui.css">
         <link rel="stylesheet" href="css/style.css">
         
         <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
         <script defer src="js/slider.js"></script>
         <script defer src="js/main.js"></script>
     </head>
@@ -133,11 +135,9 @@
                     <div class="filters">
                         <p>Фильтры</p>
                         <p>
-                            <label for="amount">Цена от:</label>
-                            <input type="text" id="amount1">
-                        </p>
-                        <p>
-                            <label for="amount">Цена до:</label>
+                            <label for="amount">Цена от</label>
+                            <input type="text" id="amount1"><br>
+                            <label for="amount">до:</label>
                             <input type="text" id="amount2">
                         </p>          
                         <div id="slider-range"></div>
@@ -198,77 +198,79 @@
                                 РОСНЕФТЬ
                               </label>
                           </div>
+                          <button class="apply">Применить</button>
+                          <button class="apply2">Сбросить</button>
                 </aside>
                 
                 <article>
                     <div class="cat-item">
-                    <div class="img"><img src="images/18.jpg" width="156px"; height="195px"></div>
+                        <div class="img"><img src="images/18.jpg" width="156px"; height="195px"></div>
                         <p>Трос буксировочный 12т с 2 крюками AZARD в сумке</p> 
-                        <div class="price">1068 &#8381</div>
-                        <div class="basket">&nbsp;</div>
+                        <div class="cena">1068 &#8381 </div>
+                        <div class="basket"></div>
                     </div>
                     <div class="cat-item">
-                    <div class="img"><img src="images/19.jpg" width="156px"; height="195px"></div>
-                    <p>Металлокерамический герметик Hi-Gear для ремонта</p>
-                    <div class="price">1081 &#8381</div>
-                    <div class="basket"></div>
+                        <div class="img"><img src="images/19.jpg" width="156px"; height="195px"></div>
+                        <p>Металлокерамический герметик Hi-Gear для ремонта</p>
+                        <div class="cena">1081 &#8381 </div>
+                        <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/20.jpg" width="100px"; height="165px"></div>
                         <p>Моторное масло SHELL HELIX HX8 5w40</p><br>
-                        <div class="price">1574 &#8381</div>
+                        <div class="cena">1574 &#8381 </div>
                         <div class="basket"></div>
                         </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/21.jpg" width="156px"; height="195px"></div>
                         <p>Термостойкий черный формирователь прокладок Done Deal</p>
-                        <div class="price">771 &#8381</div>
+                        <div class="cena">771 &#8381 </div>
                         <div class="basket"></div></div>
                     <div class="cat-item">
                         <div class="img"><img src="images/22.jpg" width="156px"; height="195px"></div>
                         <p>Шампунь для бесконтактной мойки автомобиля S15, AGA</p>
-                        <div class="price">366 &#8381</div>
+                        <div class="cena">366 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/23.jpg" width="156px"; height="195px"></div>
                         <p>Очиститель обивки салона "Сухая химчистка" 500 гр. Hi-Gear</p>
-                        <div class="price">762 &#8381</div>
+                        <div class="cena">762 &#8381 </div>
                         <div class="basket"></div></div>
                     <div class="cat-item">
                         <div class="img"><img src="images/24.jpg" width="156px"; height="195px"></div>
                         <p>Домкрат гидравлический подкатной 3 т. (140-520мм.) АвтоDело</p>
-                        <div class="price">14310 &#8381</div>
+                        <div class="cena">14310 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                     <div class="img"><img src="images/25.jpg" width="156px"; height="195px"></div>
                     <p>Автомобильный холодильник WORLD RIDER 24л.</p>
-                        <div class="price">4990 &#8381</div>
+                        <div class="cena">4990 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/26.jpg" width="156px"; height="195px"></div>
                         <p>Резак газовый Kovea Multi Purpose Torch с пьезоподжигом.</p>
-                        <div class="price">4100 &#8381</div>
+                        <div class="cena">4100 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/27.jpg" width="156px"; height="165px"></div>
                         <p>Мультиинструмент Leatherman Super Tool 300</p>
-                        <div class="price">15660 &#8381</div>
+                        <div class="cena">15660 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/28.jpg" width="156px"; height="160px"></div>
                         <p>Аккумулятор MUTLU 60 а/ч, обратная полярность серый</p>
-                        <div class="price">7700 &#8381</div>
+                        <div class="cena">7700 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                     <div class="cat-item">
                         <div class="img"><img src="images/29.jpg" width="156px"; height="195px"></div>
-                        <p>Автомобильный портативный компрессор (Беркут), BERKUT R15</p>
-                        <div class="price">4780 &#8381</div>
+                        <p><a href ="product.html">Автомобильный портативный компрессор (Беркут), BERKUT R15</a></p>
+                        <div class="cena">4780 &#8381 </div>
                         <div class="basket"></div>
                     </div>
                 </article>
