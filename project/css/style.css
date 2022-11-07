@@ -81,14 +81,14 @@
 html, body, body div, div, span, h1, h2, h3, h4, h5, h6,
 p, a, em, img, small, strike, strong, sub, sup, b, u, i,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, aside,
-section, article, header, footer, main, input, textarea 
-button {
+aside, section, article, header, footer, main, input,
+textarea, button {
 	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
     background: none;
+    box-sizing: content-box;
 }
 ol, ul, li {
 	list-style: none;
@@ -102,6 +102,7 @@ html * {
 }
 input, textarea {
     font: inherit;
+    box-sizing: border-box;
 }
 button {
     cursor: pointer;
@@ -181,7 +182,7 @@ main {
 footer {
     flex: none;
     background: rgb(108,117,125);
-    color: #fff;
+    /*color: #fff;*/
 }
 
 /* modals */
@@ -204,6 +205,7 @@ footer {
     top: 200px;
     padding: 40px;
     z-index: 1;
+    display: block;
 }
 .close {
     position: absolute;
@@ -456,16 +458,16 @@ footer {
 .catalog .filters {
     padding: 20px;
 }
-#slider-range {
-    margin: 20px 0;
-}
 .filters input {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     color: white;
     padding: 2px 5px;
     width: 50px;
     text-align: center;
     margin: 0 5px;
+}
+#slider-range {
+    margin: 20px 0;
 }
 #slider-range .ui-widget-header {
     background: blue;
@@ -496,10 +498,10 @@ footer {
     align-items: center;
 }
 .cat-item p {
-font-size: 14px;
-text-align:center;
-color: black;
-font-weight: 400;
+    font-size: 14px;
+    text-align:center;
+    color: black;
+    font-weight: 400;
 }
 .cat-item:hover {
     box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
@@ -600,12 +602,12 @@ font-weight: 400;
     left: 0;
     height: 50px;
 }
-.price {
+.product .price {
     color: #444;
     font-size: 50px;
     line-height: 70px;
 }
-.price span::after {
+.product .price span::after {
     content: '\20BD'
 }
 /*main*/
@@ -843,6 +845,7 @@ main {
     float: left;
     background-size: 100% 100%;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 .search {
     width: 331px;
@@ -927,15 +930,267 @@ margin-top: 20px;
 text-align: center;
 display: inline-block
 }
+/* order */
+.order .icon {
+    font-family: 'icomoon' !important;
+    cursor: pointer;
+}
+.table tfoot th {
+    border-bottom: none;
+}
+.table .allsum span {
+    color: red;
+}
+.table .allsum span::after {
+    content: '\20\20BD'
+}
+.table .index {
+    text-align: center;
+    width: 50px;
+}
+.table .qty {
+    text-align: center;
+    width: 200px;
+}
+.table .price {
+    text-align: center;
+    width: 100px;
+}
+.table .sum {
+    text-align: center;
+    width: 100px;
+}
+.table td.delete {
+    text-align: center;
+    width: 100px;
+}
+.table .qty strong {
+    min-width: 100px;
+    text-align: center;
+    display: inline-block;
+    user-select: none;
+}
+.table .qty span {
+    border-radius: 50%;
+    border: 1px solid black;
+    background: blue;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.table .qty .minus {
+    margin-right: 10px;
+}
+.table .qty .plus {
+    margin-left: 10px;
+}
+#order {
+    height: 30px;
+    text-align: center;
+}
+.container.empty,
+.empty .container {
+    display: none;
+}
+.empty .container.empty {
+    display: block;
+}
 
+/* calendar */
+#calendar {
+    height: auto;
+}
+.dp_grid {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+}
+/*footer*/
+.block1 {
+float: left;
+display: block;
+margin-bottom: 20px;
+margin-top: 20px;
+}
 
+.block2 {
+float: left;
+display: block;
+margin-left: 50px;
+margin-top: 20px;
+}
+footer .block1 p {
+    color: #red;
+}
+footer {
+    background-color: #ededed;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.panel_info {
+    border-top: 1px solid;
+    float: none;
+    display: block;
+    clear: left;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+footer .container{
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer p {
+    color: #black;
+}
+.news {
+    width: 466px;
+    height: 120px;
+    /*background: black;*/
+    float: right;
+    border: 5px solid #c8cbcf;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    
+}
+.sign { 
+    width: 137px;
+    height: 20px;
+    padding: 6px;
+    font-size: 16px;
+    text-align: center;
+    background: #b81c37;
+    /*margin-top: 20px;*/
+    color: #fff;
+    float: left;
+}
+.news input {
+    background: white;
+    height: 32px;
+    width: 200px;
+    float: left;
+    margin-left: 5px;
+}
+.pic_news {
+    background-image: url('../images/news.png');
+    width:35px;
+    height: 35px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+}
+.news h5 {
+    width: 371px;
+    height: 31px;
+    }
+.block1 a {
+    color: #666;
+    font: 20px/30px 'Roboto';
+    }
+.block2 a {
+    color: #666;
+    font: 20px/30px 'Roboto';
+}
+.block1 a:hover {
+    text-decoration: underline;
+}
+.block2 a:hover {
+    text-decoration: underline;
+}
+/*CONTACTS*/
+.map {
+margin-top: 0 auto;
+z-index: -1;
+float: left;
+    box-sizing: border-box;
+}
+.cont {
+    width: 400px;
+    height: 502px;
+    float: left;
+    /*border: 2px solid #DCDCDC;*/
+    margin-left: 25px;
+}
+.voprosi {
+    margin: 0 auto;
+    width: 400px;
+    height: 250px;
+    float: left;
+    margin-top: 30px;
+}
+.cont :nth-child(3) {
+    color: black;
+    margin-top: 30px;
+}
+.cont :nth-child(1)  {
+    color: black;
+}
+.cont h2 {
+    margin-top: 20px;
+}
+.cont p {
+    margin-top: 8px;
+}
 
-
+.map { margin-top: 31px;
+}
+voprosi {
+    text-align: center;
+}
+.voprosi h2 {
+    color: black;
+    text-align: center;
+}
+textarea {
+    height: 75px;
+    width: 330px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-left: 8px;
+}
+.voprosi input {
+    margin-top: 30px;
+    margin-left: 30px;
+    text-decoration: underline black 3px;
+    width: 150px;
+}
+.voprosi:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+.voprosi input:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
 
 /* adaptive */
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .container {
-        width: auto;
-        margin: 0 40px;
+    width: auto;
+    margin: 0 40px;
     }
+header {
+    display: block;
+}
+container {
+    display:block;
+}
+.container aside {
+    height: 1100px;
+    width: 200px;
+    margin: 0;
+    flex: none;
+}
+select{
+    width: 160px;
+}
 }
